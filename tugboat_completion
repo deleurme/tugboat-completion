@@ -72,7 +72,7 @@ _tugboat() {
       return 0
       ;;
     info_image )
-      droplets=$(tugboat droplets |awk '{print $1}')
+      droplets=$(tugboat images --global |awk '{print $1}')
       COMPREPLY=( $(compgen -W "${droplets}" -- "${cur}") )
       return 0
       ;;
